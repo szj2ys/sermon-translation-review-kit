@@ -1,0 +1,3 @@
+term_id,source_language,target_language,target_variety,source_term,sentence_context,intended_sense,evidence_location,proposed_rendering,review_status,reviewer_role,reviewed_on,approved_rendering,review_note
+EX01,English,UNDECIDED,UNDECIDED,River Hall,The meeting is in River Hall.,Fictional room name; do not treat it as a river.,Constructed example only,,PENDING,,,,Confirm the target language and location with the local team.
+EX02,English,UNDECIDED,UNDECIDED,communion,The next section of this outline concerns communion.,The intended use has not been explained.,Constructed example only,,BLOCKED,,,,Ask the speaker for context before proposing wording.

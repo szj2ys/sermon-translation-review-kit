@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "provenance": "Constructed English-only teaching cases; not recordings, real machine output, or a translation benchmark.",
+  "cases": [
+    {
+      "id": "C01",
+      "label": "Negation lost before translation",
+      "spoken": "The meeting is not on Friday.",
+      "source_transcript": "The meeting is on Friday.",
+      "target_output": null,
+      "expected_stage": "INPUT_OR_ASR",
+      "severity": "MEANING",
+      "observable_failure": "The source transcript removes not and reverses the announcement.",
+      "next_action": "Check intelligible source audio and correct the transcript or use the available correction channel.",
+      "pass_recheck": "The reviewed transcript and the recipient's corrected information both retain the negative statement."
+    },
+    {
+      "id": "C02",
+      "label": "Number substitution",
+      "spoken": "The group meets at six fifteen.",
+      "source_transcript": "The group meets at six fifty.",
+      "target_output": null,
+      "expected_stage": "INPUT_OR_ASR",
+      "severity": "MEANING",
+      "observable_failure": "The transcript changes the announced time.",
+      "next_action": "Check the announced time with the service team and replay the phrase using the actual input.",
+      "pass_recheck": "The transcript and corrected receiving-side message identify six fifteen."
+    },
+    {
+      "id": "C03",
+      "label": "Room name becomes an ordinary phrase",
+      "spoken": "Meet in River Hall after the service.",
+      "source_transcript": "Meet in river haul after the service.",
+      "target_output": null,
+      "expected_stage": "INPUT_OR_ASR",
+      "severity": "MEANING",
+      "observable_failure": "The fictional room name is no longer identifiable in the transcript.",
+      "next_action": "Confirm spelling with the source owner and test the complete phrase; a vocabulary hint is optional only if the tool supports it.",
+      "pass_recheck": "The received information points unambiguously to the intended room."
+    },
+    {
+      "id": "C04",
+      "label": "Book name changed",
+      "spoken": "The reading is from John chapter three.",
+      "source_transcript": "The reading is from Job chapter three.",
+      "target_output": null,
+      "expected_stage": "INPUT_OR_ASR",
+      "severity": "MEANING",
+      "observable_failure": "The transcript names a different book; no Scripture text is supplied.",
+      "next_action": "Compare the spoken reference with the speaker's checked outline and correct the book name.",
+      "pass_recheck": "Book and chapter identify the speaker's intended reference in both the transcript and the receiving-side correction."
+    },
+    {
+      "id": "C05",
+      "label": "Condition changed",
+      "spoken": "If the hall is closed, wait by the entrance.",
+      "source_transcript": "The hall is closed. Wait by the entrance.",
+      "target_output": null,
+      "expected_stage": "INPUT_OR_ASR",
+      "severity": "MEANING",
+      "observable_failure": "A conditional instruction is presented as a fact.",
+      "next_action": "Review the whole sentence, not just the nouns, then communicate the corrected condition.",
+      "pass_recheck": "The listener can distinguish what to do if the hall is closed from whether it is currently closed."
+    },
+    {
+      "id": "C06",
+      "label": "Unexplained theological term",
+      "spoken": "Today we will discuss communion.",
+      "source_transcript": "Today we will discuss communion.",
+      "target_output": null,
+      "expected_stage": "CONTEXT_REVIEW",
+      "severity": "UNRESOLVED",
+      "observable_failure": "No target wording or explanation of the intended use is available; translation correctness cannot be judged.",
+      "next_action": "Ask the speaker for the intended sense and let a competent language reviewer consider the sentence in context.",
+      "pass_recheck": "The intended use, proposed wording, reviewer, and review reasoning are recorded; no definition is invented by this kit."
+    },
+    {
+      "id": "C07",
+      "label": "Idiom needs the speaker's meaning",
+      "spoken": "We are on the same page.",
+      "source_transcript": "We are on the same page.",
+      "target_output": null,
+      "expected_stage": "CONTEXT_REVIEW",
+      "severity": "UNRESOLVED",
+      "observable_failure": "The English phrase could concern a physical page or an idiom; no target output is available to assess.",
+      "next_action": "Ask what the speaker means in the surrounding passage and review an explanation or rendering with the language reviewer.",
+      "pass_recheck": "The reviewer can explain how the received wording preserves the speaker's stated meaning."
+    },
+    {
+      "id": "C08",
+      "label": "Only a target-language complaint is available",
+      "spoken": null,
+      "source_transcript": null,
+      "target_output": null,
+      "expected_stage": "UNKNOWN",
+      "severity": "UNRESOLVED",
+      "observable_failure": "A listener reports a confusing sentence, but no source audio, transcript, or target wording has been retained.",
+      "next_action": "Record what can be established without inventing the missing sentence; arrange a permitted reproduction with the speaker and reviewer.",
+      "pass_recheck": "A new observed sample provides enough evidence to classify the problem; the original incident remains unclassified."
+    },
+    {
+      "id": "C09",
+      "label": "Quotation boundary disappears",
+      "spoken": "Maya asked, 'Is the hall open?' I answered, 'Not yet.'",
+      "source_transcript": "Maya asked is the hall open I answered not yet.",
+      "target_output": null,
+      "expected_stage": "PRESENTATION",
+      "severity": "MEANING",
+      "observable_failure": "The words are present, but the display does not clearly distinguish the reported question from the answer.",
+      "next_action": "Review punctuation and attribution cues in the format recipients actually receive; Maya is a fictional name.",
+      "pass_recheck": "A reviewer can identify who asked the question and who answered without relying on the original audio."
+    },
+    {
+      "id": "C10",
+      "label": "A paraphrase is mislabeled as a quotation",
+      "spoken": "I will summarize the point in my own words.",
+      "source_transcript": "I will summarize the point in my own words.",
+      "target_output": null,
+      "expected_stage": "PRESENTATION",
+      "severity": "MEANING",
+      "observable_failure": "A hypothetical display labels the following material an exact quotation even though the speaker identifies a summary.",
+      "next_action": "Remove the unsupported exact-quotation label and check the chosen source/version only when an actual quotation is intended.",
+      "pass_recheck": "The displayed attribution distinguishes a summary from quoted source text."
+    },
+    {
+      "id": "C11",
+      "label": "Minor punctuation with meaning preserved",
+      "spoken": "Thank you, everyone.",
+      "source_transcript": "Thank you everyone.",
+      "target_output": null,
+      "expected_stage": "PRESENTATION",
+      "severity": "COSMETIC",
+      "observable_failure": "A comma is absent. In this constructed source-language example the intended thanks remains clear.",
+      "next_action": "Ask the reviewer whether punctuation affects meaning or readability in the actual context before assigning severity.",
+      "pass_recheck": "Reviewer confirms meaning and readability remain usable; do not infer target-language accuracy from this example."
+    },
+    {
+      "id": "C12",
+      "label": "Transcript correct, target review still required",
+      "spoken": "Please wait outside until the hall opens.",
+      "source_transcript": "Please wait outside until the hall opens.",
+      "target_output": null,
+      "expected_stage": "UNKNOWN",
+      "severity": "UNRESOLVED",
+      "observable_failure": "The source transcript is correct, but no actual translated wording or competent target-language assessment exists.",
+      "next_action": "Obtain the actual target output and an independent language review. Do not fabricate a bad translation for this exercise.",
+      "pass_recheck": "A reviewer checks location and waiting condition against the intended message; only observed target evidence can support a TRANSLATION diagnosis."
+    }
+  ]
+}
